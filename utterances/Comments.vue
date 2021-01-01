@@ -8,7 +8,8 @@
 
 <script>
 import Utterances from './Utterances.vue'
-export default {
+import Vue from "vue";
+export default Vue.extend({
     components: { Utterances },
     computed: {
         // Utterances plugin options
@@ -18,7 +19,7 @@ export default {
         isShowComment() {
             let dsc = this.options.defaultShowComment
             let fsc = this.$frontmatter.showComment
-            if (this.$page.path === '/') return false
+            //if (this.$page.path === '/') return false
             if (dsc === false) {
                 return fsc === true
             } else {
@@ -26,5 +27,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

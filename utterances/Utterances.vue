@@ -5,8 +5,8 @@
 </template>
 
 <script>
-export default {
-    name: 'Utterances',
+import Vue from "vue";
+export default Vue.extend({
     props: {
         options: {
             type: Object,
@@ -68,7 +68,7 @@ export default {
             }
         }
     }
-}
+})
 </script>
 
 <style>
